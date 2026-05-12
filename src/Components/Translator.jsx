@@ -1,16 +1,6 @@
 import { useState } from 'react';
-
-const MORSE_CODE_DICT = {
-    'A': '.-', 'B': '-...', 'C': '-.-.', 'D': '-..', 'E': '.', 'F': '..-.',
-    'G': '--.', 'H': '....', 'I': '..', 'J': '.---', 'K': '-.-', 'L': '.-..',
-    'M': '--', 'N': '-.', 'O': '---', 'P': '.--.', 'Q': '--.-', 'R': '.-.',
-    'S': '...', 'T': '-', 'U': '..-', 'V': '...-', 'W': '.--', 'X': '-..-',
-    'Y': '-.--', 'Z': '--..', '1': '.----', '2': '..---', '3': '...--',
-    '4': '....-', '5': '.....', '6': '-....', '7': '--...', '8': '---..',
-    '9': '----.', '0': '-----'
-};
-
-export default function Translator({ onBack }) {
+import { MORSE_CODE_DICT } from '../utils/morsecode';
+export default function Translator() {
     const [text, setText] = useState('');
 
     const renderMorseBoxes = (input) => {
@@ -28,7 +18,7 @@ export default function Translator({ onBack }) {
                     <div
                         key={`${char}-${index}`}
                         className="px-4 py-2 bg-stone-700 rounded-xl flex items-center justify-center transition-all duration-200 cursor-default
-                        text-orange-400 font-mono text-2xl tracking-[0.1em] font-bold
+                        text-amber-400 font-mono text-2xl tracking-[0.1em] font-bold
                         shadow-[6px_6px_12px_rgba(0,0,0,0.4),_inset_-3px_-3px_6px_rgba(0,0,0,0.3),_inset_3px_3px_6px_rgba(255,255,255,0.08)]
                         hover:shadow-[10px_10px_20px_rgba(0,0,0,0.6),_inset_-3px_-3px_6px_rgba(0,0,0,0.3),_inset_3px_3px_6px_rgba(255,255,255,0.1)] 
                         hover:bg-stone-600 hover:scale-105 hover:-translate-y-1"
@@ -41,22 +31,19 @@ export default function Translator({ onBack }) {
     };
 
     return (
-        <div className="relative min-h-screen flex flex-col items-center justify-center p-6 font-sans text-stone-100 bg-stone-900 overflow-hidden
-                        bg-[radial-gradient(rgba(255,255,255,0.1)_1px,transparent_3px)] 
-                        bg-[size:16px_16px]">
+        <div className="min-h-screen flex flex-col items-center justify-center p-6 font-sans text-stone-100 bg-stone-900 overflow-hidden
+            bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] 
+            bg-[size:40px_40px]">
             <div className="relative z-10 w-full max-w-3xl">
 
 
                 <div className="bg-stone-800 rounded-[40px] p-8 md:p-12 w-full flex flex-col border-none shadow-[20px_20px_40px_rgba(0,0,0,0.6),_inset_-10px_-10px_20px_rgba(0,0,0,0.5),_inset_10px_10px_20px_rgba(255,255,255,0.06)]">
 
 
-                    <div className="pb-5 mb-8 flex justify-between items-end border-b border-stone-900/50">
+                    <div className="pb-5 mb-8 flex justify-between items-end border-b border-white-900/50">
                         <div>
-                            <h2 className="text-3xl font-bold text-white tracking-wide">Translator</h2>
+                            <h2 className="text-3xl font-bold text-white tracking-wide">Morse Code Translator</h2>
                         </div>
-                        <button onClick={onBack} className="text-sm text-stone-400 hover:text-orange-400 transition-colors uppercase tracking-widest font-semibold cursor-pointer">
-                            ← Back
-                        </button>
                     </div>
 
                     <div className="space-y-8">
@@ -68,8 +55,7 @@ export default function Translator({ onBack }) {
                             <textarea
                                 id="english-text"
                                 rows="3"
-                                // Input box: Deep stone-900 inner shadow, orange focus ring
-                                className="w-full p-5 bg-stone-900/80 rounded-2xl text-white font-mono placeholder-stone-500 resize-none border-none outline-none focus:ring-2 focus:ring-orange-500/50 transition-all
+                                className="w-full p-5 bg-stone-900/80 rounded-2xl text-white font-mono placeholder-stone-500 resize-none border-none outline-none focus:ring-2 focus:ring-amber-400/50 transition-all
                                 shadow-[inset_6px_6px_12px_rgba(0,0,0,0.6),_inset_-6px_-6px_12px_rgba(255,255,255,0.03)]"
                                 placeholder="Enter text to translate..."
                                 value={text}
@@ -77,7 +63,6 @@ export default function Translator({ onBack }) {
                             ></textarea>
                         </div>
 
-                        {/* Output Section */}
                         <div>
                             <label className="block text-sm font-semibold text-stone-300 mb-3 tracking-widest uppercase ml-2">
                                 Output: Morse Code
@@ -105,6 +90,6 @@ export default function Translator({ onBack }) {
 
                 </div>
             </div>
-        </div>
+        </div >
     );
 }

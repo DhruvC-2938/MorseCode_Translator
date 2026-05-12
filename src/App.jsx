@@ -1,19 +1,5 @@
-import { useState } from 'react';
-import LandingPage from './LandingPage';
-import Translator from './Translator';
+import Translator from "./components/Translator";
 
 export default function App() {
-  const [showTranslator, setShowTranslator] = useState(false);
-
-  return (
-    <>
-      {!showTranslator ? (
-
-        <LandingPage onEnter={() => setShowTranslator(true)} />
-      ) : (
-
-        <Translator onBack={() => setShowTranslator(false)} />
-      )}
-    </>
-  );
+  return <Translator />;
 }
