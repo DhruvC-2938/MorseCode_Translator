@@ -59,8 +59,6 @@ public/
 ├── vite.config.js
 └── tailwind.config.js
 ```
-```
-
 ---
 
 ## Morse Code Support
