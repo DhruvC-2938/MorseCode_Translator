@@ -37,14 +37,28 @@ This web application converts English text into Morse code symbols (`.` and `-`)
 ```bash
 src/
 │
-├── App.jsx
-├── LandingPage.jsx
-├── Translator.jsx
-├── main.jsx
-├── index.css
-│
 ├── assets/
-└── public/
+│
+├── components/
+│   └── Translator.jsx
+│
+├── utils/
+│   └── morsecode.js
+│
+├── App.css
+├── App.jsx
+├── index.css
+├── main.jsx
+│
+public/
+│
+├── .gitignore
+├── eslint.config.js
+├── index.html
+├── package.json
+├── vite.config.js
+└── tailwind.config.js
+```
 ```
 
 ---
