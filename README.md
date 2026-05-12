@@ -25,12 +25,10 @@ This web application converts English text into Morse code symbols (`.` and `-`)
 ---
 
 ## Preview
-```
+
 <img width="1709" height="981" alt="Screenshot 2026-05-12 at 11 52 17 AM" src="https://github.com/user-attachments/assets/e5b881ce-feee-43eb-ac9b-bb4a9bcdd4fd" />
-```
-```
-![Uploading Screenshot 2026-05-12 at 11.52.41 AM.png…]()
-```
+<img width="1710" height="981" alt="Screenshot 2026-05-12 at 11 53 52 AM" src="https://github.com/user-attachments/assets/ffdcf189-6619-4ab1-91af-0d7c141c9c07" />
+
 
 ---
 
