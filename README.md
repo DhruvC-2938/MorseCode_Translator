@@ -9,11 +9,8 @@ This web application converts English text into Morse code symbols (`.` and `-`)
 ## Features
 
 - Real-time English → Morse code conversion
-- Interactive neumorphism-inspired UI
-- Responsive design
 - Animated Morse code output boxes
 - Smooth transitions and hover effects
-- Clean modern dark theme
 - Built with React functional components
 
 ---
@@ -28,16 +25,12 @@ This web application converts English text into Morse code symbols (`.` and `-`)
 ---
 
 ## Preview
-
-### Landing Page
-- Premium dark neumorphic interface
-- Animated START button
-- Responsive layout
-
-### Translator Interface
-- Real-time translation
-- Morse code visual blocks
-- Animated UI interactions
+```
+<img width="1709" height="981" alt="Screenshot 2026-05-12 at 11 52 17 AM" src="https://github.com/user-attachments/assets/e5b881ce-feee-43eb-ac9b-bb4a9bcdd4fd" />
+```
+```
+![Uploading Screenshot 2026-05-12 at 11.52.41 AM.png…]()
+```
 
 ---
 
