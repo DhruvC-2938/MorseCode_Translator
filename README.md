@@ -65,24 +65,24 @@ public/
 
 ## Morse Code Support
 
-### Alphabets
-A - Z
+The translator currently supports:
 
-### Numbers
-0 - 9
+- Alphabets: `A - Z`
+- Numbers: `0 - 9`
 
-Example:
+### Example
+
+#### Input
 
 ```text
 HELLO
 ```
 
-Output:
+#### Output
 
 ```text
 .... . .-.. .-.. ---
 ```
-
 ---
 
 ## Installation
