@@ -36,28 +36,19 @@ This web application converts English text into Morse code symbols (`.` and `-`)
 
 ```bash
 src/
-│
-├── assets/
-│
-├── components/
-│   └── Translator.jsx
+├── components/        # Reusable React components
+│   ├── Translator.jsx # Parent component managing state
+│   ├── InputBox.jsx   # Handles user input
+│   ├── MorseOutput.jsx # Displays translated Morse code
+│   └── MorseCard.jsx  # Reusable Morse code card component
 │
 ├── utils/
-│   └── morsecode.js
+│   └── morsecode.js   # Morse code dictionary mappings
 │
-├── App.css
-├── App.jsx
-├── index.css
-├── main.jsx
-│
-public/
-│
-├── .gitignore
-├── eslint.config.js
-├── index.html
-├── package.json
-├── vite.config.js
-└── tailwind.config.js
+├── App.jsx            # Root application component
+├── main.jsx           # React DOM entry point
+├── App.css            # Component-level styles
+└── index.css          # Global styles
 ```
 ---
 
