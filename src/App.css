@@ -1,0 +1,22 @@
+body::before {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background: #ffd9d9;
+    top: -130px;
+    right: -120px;
+    opacity: 0.8;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    background: #ffe4e4;
+    bottom: -130px;
+    left: -120px;
+}
